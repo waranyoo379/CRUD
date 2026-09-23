@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CourseExplorer from "@/components/CourseExplorer";
-import { courses } from "@/data/courses";
+import { courses } from "@/data/coursesdata";
  
 export const metadata: Metadata = {
   title: "รายวิชาทั้งหมด",
@@ -10,7 +10,7 @@ export default function CoursesPage() {
   return (
     <main className="container">
       <h1>รายวิชาทั้งหมด</h1>
-      <CourseExplorer />
+      <CourseExplorer initialCourses={courses} />
     </main>
   );
 }
